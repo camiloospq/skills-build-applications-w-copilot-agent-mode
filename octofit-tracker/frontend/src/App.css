@@ -1,0 +1,146 @@
+
+/* App.css */
+
+/* Brand Colors */
+:root {
+  --octofit-accent: #00bfae;
+  --octofit-dark: #222a36;
+  --octofit-light: #eafaf7;
+  --octofit-btn: #ff6f61;
+  --octofit-table-header: #00bfae;
+  --octofit-table-row: #f7fafd;
+  --octofit-link: #0077ff;
+  --octofit-heading: #ff6f61;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, var(--octofit-light) 0%, #c8e6e6 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: var(--octofit-dark);
+}
+
+/* Navigation */
+.navbar {
+  background: linear-gradient(90deg, var(--octofit-accent) 0%, var(--octofit-dark) 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+  color: var(--octofit-btn) !important;
+}
+
+/* Logo */
+.octofit-logo {
+  height: 40px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  color: var(--octofit-heading);
+  text-shadow: 0 2px 8px #ffe0e0;
+  font-weight: 700;
+}
+
+/* Links */
+a, .App-link {
+  color: var(--octofit-link);
+  text-decoration: none;
+  position: relative;
+}
+a:hover, .App-link:hover {
+  color: var(--octofit-btn);
+}
+a::after, .App-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--octofit-link);
+  transition: width .2s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+a:hover::after, .App-link:hover::after {
+  width: 100%;
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(120deg, #fff 80%, var(--octofit-light) 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,191,174,0.08);
+  border: none;
+}
+
+/* Tables */
+.table {
+  background: var(--octofit-table-row);
+  color: var(--octofit-dark);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table thead {
+  background: var(--octofit-table-header);
+  color: #fff;
+  font-weight: 600;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: #eafaf7;
+}
+.table-hover tbody tr:hover {
+  background: #b2f7ef;
+  color: var(--octofit-dark);
+}
+.table-bordered {
+  border: 2px solid var(--octofit-accent);
+}
+
+/* Buttons */
+.btn, .btn-primary, .btn-outline-primary {
+  background: linear-gradient(90deg, var(--octofit-btn) 60%, var(--octofit-accent) 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,191,174,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn:hover, .btn-primary:hover, .btn-outline-primary:hover {
+  background: linear-gradient(90deg, var(--octofit-accent) 60%, var(--octofit-btn) 100%);
+  box-shadow: 0 4px 16px rgba(255,111,97,0.12);
+}
+
+/* Forms */
+.form-label {
+  color: var(--octofit-accent);
+  font-weight: 500;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 12px;
+  border: 2px solid var(--octofit-accent);
+}
+.modal-header {
+  background: var(--octofit-light);
+  color: var(--octofit-dark);
+}
+
+/* Misc */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #eafaf7;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--octofit-accent);
+  border-radius: 8px;
+}
